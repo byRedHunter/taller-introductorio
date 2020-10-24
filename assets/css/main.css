@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+html {
+	font-size: 62.5%;
+}
+
+:root {
+	--font-family: 'Poppins', sans-serif;
+	--font-size: 1.6rem;
+	--font-weight-300: 300;
+	--font-weight-400: 400;
+	--font-weight-600: 600;
+	--color-red: #ff7a7a;
+	--color-green: #38cc8c;
+	--color-blue: #6055a5;
+	--color-dark: #3e3c4950;
+	--color-light: #b9b6d3;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-size: var(--font-size);
+	font-family: var(--font-family);
+	color: #fff;
+	font-weight: var(--font-weight-300);
+}
+
+.main {
+	width: 100%;
+	min-height: 100vh;
+	background: url('../images/bg-intro-mobile.png') var(--color-red);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	padding: 6rem 0;
+}
+.main-container {
+	width: 90%;
+	max-width: 100rem;
+	margin: 0 auto;
+	padding: 1rem;
+	display: grid;
+	row-gap: 4rem;
+}
+.main__info {
+	text-align: center;
+}
+.main__info .main__info--title {
+	margin-bottom: 2rem;
+}
+
+.main__signup {
+	width: 100%;
+}
+.main__signup--price,
+.form {
+	border-bottom: 0.5rem solid var(--color-dark);
+	border-radius: 0.8rem;
+}
+
+.main__signup--price {
+	background-color: var(--color-blue);
+	text-align: center;
+	padding: 1.5rem 0;
+	margin-bottom: 2rem;
+}
+
+.form {
+	color: #000;
+	width: 100%;
+	background: #fff;
+	padding: 1.5rem;
+}
+
+.form input {
+	color: #3e3c49;
+	width: 100%;
+	margin-bottom: 1.5rem;
+	border-radius: 0.5rem;
+	padding: 1.5rem 1rem;
+	font-weight: var(--font-weight-600);
+}
+.form input::placeholder {
+	color: #3e3c49;
+	font-weight: var(--font-weight-600);
+}
+.form__input {
+	border: 0.1rem solid var(--color-dark);
+}
+.form .form__button {
+	background-color: var(--color-green);
+	color: #fff;
+	text-transform: uppercase;
+	border: 0;
+	border-bottom: 0.3rem solid var(--color-dark);
+}
+.form__info {
+	text-align: center;
+	font-size: 1.2rem;
+	color: var(--color-light);
+}
+.form__info--term {
+	color: var(--color-red);
+	font-weight: var(--font-weight-600);
+	text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+	.main-container {
+		justify-items: center;
+	}
+	.main__info,
+	.main__signup {
+		width: 70%;
+	}
+}
+
+@media screen and (min-width: 900px) {
+	.main {
+		padding: 0;
+		display: flex;
+		background-image: url('../images/bg-intro-desktop.png');
+	}
+	.main-container {
+		grid-template: 1fr / 1fr 1fr;
+		align-items: center;
+		row-gap: 0;
+		column-gap: 4rem;
+	}
+	.main__info,
+	.main__signup {
+		width: 100%;
+	}
+	.main__info {
+		text-align: left;
+	}
+	.main__info .main__info--title {
+		font-size: 3.8rem;
+	}
+	.form {
+		padding: 2rem;
+	}
+}
